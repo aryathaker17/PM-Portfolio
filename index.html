@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arya Thaker — Product Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background:#fafafa; color:#0e0e0e; font-family:'Archivo',sans-serif; min-height:100vh;">
+
+  <!-- NAV -->
+  <nav style="position:sticky; top:0; z-index:50; background:rgba(250,250,250,0.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid #e2e2e2;">
+    <div class="nav-inner" style="max-width:1200px; margin:0 auto; padding:18px 40px; display:flex; justify-content:space-between; align-items:center;">
+      <a href="#top" style="font:800 16px/1 'Archivo',sans-serif; letter-spacing:-.01em; color:#0e0e0e; text-decoration:none;">ARYA THAKER</a>
+      <div style="display:flex; gap:30px; align-items:center;">
+        <a href="#experience" class="nav-link" style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#555; text-decoration:none;">Experience</a>
+        <a href="#work"       class="nav-link" style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#555; text-decoration:none;">Work</a>
+        <a href="#about"      class="nav-link" style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#555; text-decoration:none;">About</a>
+        <a href="#contact"    class="nav-cta"  style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#fafafa; text-decoration:none; background:#0e0e0e; padding:9px 16px; border-radius:99px; transition:background .2s;">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" style="max-width:1200px; margin:0 auto; padding:70px 40px 60px;">
+    <div style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.1em; text-transform:uppercase; color:oklch(0.6 0.2 25); margin-bottom:30px;">● Product Manager — Woodbridge, NJ</div>
+    <h1 style="font:900 clamp(64px,13vw,184px)/0.84 'Archivo',sans-serif; letter-spacing:-.045em; margin:0;">PRODUCT<br>MANAGER<span style="color:oklch(0.6 0.2 25);">.</span></h1>
+    <div class="hero-bottom" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:40px; margin-top:46px; padding-top:34px; border-top:2px solid #0e0e0e;">
+      <p style="font:400 20px/1.5 'Archivo',sans-serif; margin:0; max-width:520px; color:#2a2a2a;">I ship products end to end, coding the prototype, reading the analytics, and aligning sales, SEO, UX and engineering until it launches. PM with an engineer's background.</p>
+      <div style="display:flex; gap:44px;">
+        <div>
+          <div style="font:800 38px/1 'Archivo',sans-serif; letter-spacing:-.02em;">+20<span style="font-size:22px;">%</span></div>
+          <div style="font:500 11px/1.3 'JetBrains Mono',monospace; letter-spacing:.04em; text-transform:uppercase; color:#888; margin-top:8px;">Conversion</div>
+        </div>
+        <div>
+          <div style="font:800 38px/1 'Archivo',sans-serif; letter-spacing:-.02em;">+20<span style="font-size:22px;">M</span></div>
+          <div style="font:500 11px/1.3 'JetBrains Mono',monospace; letter-spacing:.04em; text-transform:uppercase; color:#888; margin-top:8px;">SKUs added</div>
+        </div>
+        <div>
+          <div style="font:800 38px/1 'Archivo',sans-serif; letter-spacing:-.02em;">+68<span style="font-size:22px;">%</span></div>
+          <div style="font:500 11px/1.3 'JetBrains Mono',monospace; letter-spacing:.04em; text-transform:uppercase; color:#888; margin-top:8px;">Throughput</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" style="background:#0e0e0e; color:#fafafa; margin-top:40px;">
+    <div class="exp-inner" style="max-width:1200px; margin:0 auto; padding:80px 40px;">
+      <h2 style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.12em; text-transform:uppercase; margin:0 0 6px;"><span style="color:oklch(0.66 0.2 25);">(01)</span> Experience</h2>
+      <div id="exp-list" style="border-top:2px solid #fafafa;"></div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section id="work" style="max-width:1200px; margin:0 auto; padding:60px 40px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:24px;">
+      <h2 style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.12em; text-transform:uppercase; margin:0;"><span style="color:oklch(0.6 0.2 25);">(02)</span> Selected Work</h2>
+      <span style="font:500 11px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#888;">Tap to open case study</span>
+    </div>
+    <div style="display:flex; gap:8px; margin-bottom:0;">
+      <button class="tab-btn active" data-tab="all">All</button>
+      <button class="tab-btn" data-tab="professional">Professional Work</button>
+      <button class="tab-btn" data-tab="personal">Personal Projects</button>
+    </div>
+    <div id="work-list" style="border-top:2px solid #0e0e0e; margin-top:24px;"></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section style="max-width:1200px; margin:0 auto; padding:80px 40px;">
+    <h2 style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.12em; text-transform:uppercase; margin:0 0 6px;"><span style="color:oklch(0.6 0.2 25);">(03)</span> Skills &amp; Tools</h2>
+    <div id="skills-list" style="border-top:2px solid #0e0e0e;"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="max-width:1200px; margin:0 auto; padding:60px 40px 80px;">
+    <h2 style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.12em; text-transform:uppercase; margin:0 0 6px;"><span style="color:oklch(0.6 0.2 25);">(04)</span> About</h2>
+    <div class="about-row" style="border-top:2px solid #0e0e0e; padding-top:44px; display:grid; grid-template-columns:1.5fr 1fr; gap:60px;">
+      <div>
+        <p style="font:400 26px/1.4 'Archivo',sans-serif; margin:0 0 22px; letter-spacing:-.01em;">I'm a product manager who started in software engineering — and never left the code behind.</p>
+        <p style="font:400 17px/1.6 'Archivo',sans-serif; margin:0 0 18px; color:#444;">That background means I can prototype an idea, design the schema behind it, and still own the roadmap, the A/B tests, and the cross-functional launch. At Radwell I drove conversion, catalog and throughput gains across a B2B commerce platform; on the side I ship my own apps from concept to the App Store.</p>
+        <p style="font:400 17px/1.6 'Archivo',sans-serif; margin:0; color:#444;">I'm currently pursuing my MBA in Finance &amp; Product Management at NJIT, sharpening the business side of building products people actually use.</p>
+      </div>
+      <div>
+        <div style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.1em; text-transform:uppercase; color:#888; margin-bottom:20px;">Education</div>
+        <div id="edu-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:#0e0e0e; color:#fafafa;">
+    <div class="contact-inner" style="max-width:1200px; margin:0 auto; padding:90px 40px 70px;">
+      <h2 style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.12em; text-transform:uppercase; margin:0 0 30px;"><span style="color:oklch(0.66 0.2 25);">(05)</span> Contact</h2>
+      <a href="mailto:aryathaker7@gmail.com" class="contact-big" style="display:block; font:900 clamp(44px,9vw,128px)/0.9 'Archivo',sans-serif; letter-spacing:-.04em; color:#fafafa; text-decoration:none;">LET'S<br>TALK<span style="color:oklch(0.66 0.2 25);">.</span></a>
+      <div style="display:flex; flex-wrap:wrap; gap:50px; margin-top:54px; padding-top:34px; border-top:1px solid #2a2a2a;">
+        <div>
+          <div style="font:500 11px/1 'JetBrains Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:#888; margin-bottom:10px;">Email</div>
+          <a href="mailto:aryathaker7@gmail.com" class="contact-link" style="font:600 17px/1 'Archivo',sans-serif; color:#fafafa; text-decoration:none;">aryathaker7@gmail.com</a>
+        </div>
+        <div>
+          <div style="font:500 11px/1 'JetBrains Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:#888; margin-bottom:10px;">Phone</div>
+          <a href="tel:5512255620" class="contact-link" style="font:600 17px/1 'Archivo',sans-serif; color:#fafafa; text-decoration:none;">551-225-5620</a>
+        </div>
+        <div>
+          <div style="font:500 11px/1 'JetBrains Mono',monospace; letter-spacing:.08em; text-transform:uppercase; color:#888; margin-bottom:10px;">Location</div>
+          <span style="font:600 17px/1 'Archivo',sans-serif;">Woodbridge, NJ</span>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:80px; font:500 11px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#666;">
+        <span>Arya Thaker — Portfolio</span><span>Designed &amp; built, 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY OVERLAY -->
+  <div id="case-overlay" style="position:fixed; inset:0; z-index:200; background:#fafafa; overflow-y:auto;">
+    <div style="position:sticky; top:0; z-index:10; background:rgba(250,250,250,0.85); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid #e2e2e2;">
+      <div style="max-width:1000px; margin:0 auto; padding:18px 40px; display:flex; justify-content:space-between; align-items:center;">
+        <span id="overlay-label" style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#888;"></span>
+        <button onclick="closeCase()" class="close-btn" style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.06em; text-transform:uppercase; color:#fafafa; background:#0e0e0e; border:none; padding:10px 18px; border-radius:99px; cursor:pointer; transition:background .2s;">Close ✕</button>
+      </div>
+    </div>
+    <div id="overlay-content" style="max-width:1000px; margin:0 auto; padding:60px 40px 100px;"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
