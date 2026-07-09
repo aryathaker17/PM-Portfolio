@@ -142,7 +142,23 @@ function openCase(i) {
         <div style="font:800 clamp(30px,4vw,46px)/0.9 'Archivo',sans-serif; letter-spacing:-.03em;">${esc(m.stat)}</div>
         <div style="font:500 12px/1.3 'JetBrains Mono',monospace; color:#888; margin-top:10px;">${esc(m.label)}</div>
       </div>`).join('')}
-    </div>`;
+    </div>
+
+    ${p.images && p.images.length ? `
+    <div style="margin-top:60px;">
+      <h3 style="font:600 12px/1 'JetBrains Mono',monospace; letter-spacing:.1em; text-transform:uppercase; margin:0 0 24px;"><span style="color:oklch(0.6 0.2 25);">→</span> Images</h3>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px;">
+        ${p.images.map((src, idx) => `
+        <div style="border-radius:6px; overflow:hidden; border:1px solid #e2e2e2;">
+          <img src="${esc(src)}" alt="${esc(p.title)}" class="gallery-thumb"
+            style="width:100%; display:block; object-fit:cover; aspect-ratio:16/9;"
+            data-images="${p.images.map(esc).join('|')}"
+            data-index="${idx}"
+            onclick="openLightbox(this)">
+        </div>`).join('')}
+      </div>
+    </div>` : ''}
+    `;
 
   const overlay = document.getElementById('case-overlay');
   overlay.style.display = 'block';
@@ -157,3 +173,63 @@ function closeCase() {
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCase(); });
+
+/* ── Lightbox ── */
+const lb        = document.createElement('div');
+lb.id           = 'lightbox';
+lb.innerHTML    = `
+  <button id="lb-close" onclick="closeLightbox()">Close ✕</button>
+  <button class="lb-nav" id="lb-prev" onclick="lbStep(-1)">←</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lb-nav" id="lb-next" onclick="lbStep(1)">→</button>
+  <span id="lb-counter"></span>`;
+document.body.appendChild(lb);
+
+lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+let lbImages = [];
+let lbIndex  = 0;
+
+function openLightbox(el) {
+  lbImages = el.dataset.images.split('|');
+  lbIndex  = parseInt(el.dataset.index);
+  lbShow();
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function lbStep(dir) {
+  lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+  lbShow();
+}
+
+function lbShow() {
+  document.getElementById('lb-img').src = lbImages[lbIndex];
+  const counter = document.getElementById('lb-counter');
+  const prev    = document.getElementById('lb-prev');
+  const next    = document.getElementById('lb-next');
+  const multi   = lbImages.length > 1;
+  counter.textContent  = multi ? `${lbIndex + 1} / ${lbImages.length}` : '';
+  prev.style.display   = multi ? '' : 'none';
+  next.style.display   = multi ? '' : 'none';
+}
+
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'ArrowLeft')  lbStep(-1);
+  if (e.key === 'ArrowRight') lbStep(1);
+  if (e.key === 'Escape')     closeLightbox();
+});
+
+/* Touch swipe */
+let touchStartX = 0;
+lb.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend',   e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) lbStep(diff > 0 ? 1 : -1);
+});
