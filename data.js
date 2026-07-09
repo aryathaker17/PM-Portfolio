@@ -1,7 +1,7 @@
 const projects = [
   {
     num: '01', title: 'Radwell Commerce Scale', tag: 'Adobe Commerce', year: '2024 - 2025',
-    images: ['images/radwell-2.png', 'images/radwell-1.png'],
+    images: ['images/radwell-2.png','images/radwell-1.png'],
     type: 'professional',
     role: 'Digital Product Manager',
     stack: ['Adobe Commerce', 'Prophet 21', 'Monday.com', 'AB Tasty', 'Google Analytics'],
@@ -108,10 +108,10 @@ const experience = [
     range: 'Jun 2024 — Nov 2025', company: 'Radwell International',
     role: 'Digital Product Manager', loc: 'Willingboro, NJ',
     bullets: [
-      'Drove a cross-functional launch of PDP, cart, and checkout optimizations across Sales, SEO, UX, and Engineering — increasing conversion rate 20%.',
-      'Expanded the product catalog by 20 million SKUs and improved site performance 10% using Adobe Commerce Optimizer.',
-      'Boosted order-processing throughput 68% by automating manual web order-entry validation in Prophet 21 and a custom internal system.',
-      'Reduced missed launch deadlines 33% across 4 teams through dynamic roadmaps in Monday.com and standardized dependency reviews.'
+      'Drove a cross-functional launch of PDP, cart, and checkout optimizations across Sales, SEO, UX, and Engineering, increasing conversion rate by 20%.',
+      'Expanded the product catalog by 20 million SKUs and improved site performance by 10% using Adobe Commerce Optimizer.',
+      'Boosted order-processing throughput by 68% by automating manual web order-entry validation in Prophet 21 and a custom internal system.',
+      'Reduced missed launch deadlines by 33% across 4 teams through dynamic roadmaps in Monday.com and standardized dependency reviews.'
     ]
   },
   {
