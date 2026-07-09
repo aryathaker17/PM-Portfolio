@@ -18,6 +18,20 @@ a { transition: color .2s; }
 
 #case-overlay { display: none; }
 
+.headshot-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 2px solid #e2e2e2;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .headshot-circle { width: 120px; height: 120px; }
+}
+
 .tab-btn {
   font: 600 12px/1 'JetBrains Mono', monospace;
   letter-spacing: .06em;
