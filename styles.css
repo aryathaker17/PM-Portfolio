@@ -30,6 +30,7 @@ a { transition: color .2s; }
 
 @media (max-width: 700px) {
   .headshot-circle { width: 120px; height: 120px; }
+  .hero-top { flex-direction: column-reverse; align-items: flex-start; gap: 24px; }
 }
 
 .tab-btn {
