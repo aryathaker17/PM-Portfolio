@@ -1,7 +1,7 @@
 const projects = [
   {
     num: '01', title: 'Radwell Commerce Scale', tag: 'Adobe Commerce', year: '2024 - 2025',
-    images: ['images/radwell.png'],
+    //images: ['images/radwell.png'],
     type: 'professional',
     role: 'Digital Product Manager',
     stack: ['Adobe Commerce', 'Prophet 21', 'Monday.com', 'AB Tasty', 'Google Analytics'],
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     num: '02', title: 'Kroll Inc.', tag: 'C# · .NET · Azure', year: '2023',
-    images: ['images/kroll.png'],
+    //images: ['images/kroll.png']
     type: 'professional',
     role: 'Backend Developer Intern',
     stack: ['C#', '.NET', 'Azure', 'SQL'],
@@ -42,7 +42,7 @@ const projects = [
   },
   {
     num: '03', title: 'DawnCast News Digest', tag: 'Swift · Claude API', year: '2025',
-    images: ['images/dawncast.png'],
+    images: ['images/dawncast.png', 'images/dawncast-2.png', 'images/dawncast-3.png', 'images/dawncast-4.png', 'images/dawncast-5.png', 'images/dawncast-6.png', 'images/dawncast-7.png', 'images/dawncast-8.png'],
     type: 'personal',
     role: 'Solo — Concept to Deploy',
     stack: ['Swift', 'SwiftUI', 'CryptoKit', 'NewsData.io', 'Claude API'],
@@ -62,7 +62,7 @@ const projects = [
   },
   {
     num: '04', title: 'Table-time Reservations', tag: 'PM · Full-stack', year: '2023',
-    images: ['images/tabletime.png'],
+    //images: ['images/tabletime.png'],
     type: 'personal',
     role: 'PM & Contributing Developer',
     stack: ['Python', 'PHP', 'RabbitMQ', 'MySQL', 'Yelp API'],
@@ -83,7 +83,7 @@ const projects = [
   },
   {
     num: '05', title: 'Jewelry Store Website', tag: 'HTML · SQL', year: '2022',
-    images: ['images/jewelry.png'],
+    //images: ['images/jewelry.png'],
     type: 'personal',
     role: 'Designer & Developer',
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL'],
