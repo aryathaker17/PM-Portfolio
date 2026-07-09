@@ -20,6 +20,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      #everage GitHub Actions to automatically inject the commit SHA into the HTML
+      #during deployment using sed, so every deploy gets a unique version without any manual work.
+      #browser will replace v1 with commit hash
       - uses: actions/checkout@v4
       - name: Inject cache-bust version
         run: |
