@@ -1,7 +1,7 @@
 const projects = [
   {
     num: '01', title: 'Radwell Commerce Scale', tag: 'Adobe Commerce', year: '2024 - 2025',
-    images: ['images/radwell.png'],
+    //images: ['images/radwell.png'],
     type: 'professional',
     role: 'Digital Product Manager',
     stack: ['Adobe Commerce', 'Prophet 21', 'Monday.com', 'AB Tasty', 'Google Analytics'],
